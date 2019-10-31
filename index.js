@@ -11,10 +11,11 @@ const friends = [
   { id: 3, name: 'Amira' },
 ];
 
+server.use(express.static(__dirname + '/client/build'));
 server.use(express.json());
 
 server.get('/', (req, res) => {
-  res.json('Deployed Express app');
+  res.sendFile(__dirname + '/client/build')
 });
 
 server.get('/api/friends', (req, res) => {
