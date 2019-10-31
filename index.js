@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 const friends = [
   { id: 1, name: 'Francis' },
   { id: 2, name: 'Damilola' },
-  { id: 3, name: 'Amira' }
+  { id: 3, name: 'Amira' },
 ];
 
 server.use(express.json());
